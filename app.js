@@ -1,12 +1,14 @@
-const HtmlButton=document.querySelector('.htmlButton');
-const JavaScriptbtn=document.querySelector('.JsButton');
-const text = document.querySelector('.text');
-HtmlButton.addEventListener('click', ()=>{
-    HtmlButton.classList.add('active');
-    text.classList.add('active');
-})
+const Button=document.querySelectorAll('.button');
 
-JavaScriptbtn.addEventListener('click', ()=>{
-    JavaScriptbtn.classList.add('active');
-    text.classList.add('active');
+const text = document.querySelectorAll('.text');
+
+let count=0;
+Button.forEach((btn,index)=>{
+    btn.addEventListener('click',()=>{
+        count=index;
+        btn.classList.add('active');
+        for(let i=0;i<text.length;i++){
+            text[count].classList.add('active');
+        }
+    })
 })

@@ -57,7 +57,7 @@ h2{
     cursor: pointer;
 }
 
-.htmlButton.active{
+.button.active{
     display: none;
 }
 
