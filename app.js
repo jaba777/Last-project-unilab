@@ -7,8 +7,8 @@ Button.forEach((btn,index)=>{
     btn.addEventListener('click',()=>{
         count=index;
         btn.classList.add('active');
-        for(let i=0;i<text.length;i++){
+        
             text[count].classList.add('active');
-        }
+        
     })
 })
